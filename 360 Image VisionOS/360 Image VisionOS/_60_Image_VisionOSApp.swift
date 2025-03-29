@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct _60_Image_VisionOSApp: App {
     var body: some Scene {
-        WindowGroup {
+        ImmersiveSpace {
             ContentView()
         }
     }
