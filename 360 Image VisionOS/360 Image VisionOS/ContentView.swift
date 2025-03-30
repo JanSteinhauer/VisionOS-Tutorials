@@ -9,9 +9,8 @@ import SwiftUI
 import AVFoundation
 import RealityKit
 
-class VideoViewModel: ObservableObject {
+class ImageViewModel: ObservableObject {
     @Published var avPlayer = AVPlayer()
-    @Published var playerItem: AVPlayerItem?
     
     func setupPlayerItem(from urlString: String) {
         guard let url = URL(string: urlString) else {
@@ -20,12 +19,11 @@ class VideoViewModel: ObservableObject {
         let asset = AVURLAsset(url: url)
         let item = AVPlayerItem(asset: asset)
         avPlayer.replaceCurrentItem(with: item)
-        playerItem = item
     }
 }
 
 struct ContentView: View {
-    @StateObject private var viewModel = VideoViewModel()
+    @StateObject private var viewModel = ImageViewModel()
 
     var body: some View {
         RealityView { content in
