@@ -23,7 +23,7 @@ struct ContentView: View {
               
               let textEntity = ModelEntity(
                   mesh: textMesh,
-                  materials: [SimpleMaterial(color: .white, isMetallic: false)]
+                  materials: [SimpleMaterial(color: .red, isMetallic: false)]
               )
               
               anchor.addChild(textEntity)
